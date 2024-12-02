@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.lab.fangdou_comp228lab5.HelloController" spacing="10" alignment="TOP_CENTER">
+    <HBox spacing="20">
+        <!-- Left side: Player Info -->
+        <VBox spacing="10" alignment="TOP_LEFT">
+            <Label text="Player Info" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <GridPane hgap="10" vgap="10">
+                <Label text="Player ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="playerIdField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="First Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="firstNameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Last Name:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="lastNameField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Address:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="addressField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Postal Code:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="postalCodeField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Province:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="provinceField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="Phone Number:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <TextField fx:id="phoneNumberField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+            </GridPane>
+        </VBox>
+
+        <!-- Right side: Game Info -->
+        <VBox spacing="10" alignment="TOP_LEFT">
+            <Label text="Game Info" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <GridPane hgap="10" vgap="10">
+                <Label text="Game ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="gameIdField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Game Title:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="gameTitleField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Score:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="scoreField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Date Played:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <DatePicker fx:id="datePlayedField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Add Game" fx:id="addGameButton"/>
+        <Button text="Add Player" fx:id="addPlayerButton"/>
+        <Button text="Update Player" fx:id="updatePlayerButton"/>
+        <Button text="View Player Games" fx:id="viewPlayerGamesButton"/>
+    </HBox>
+
+    <TextArea fx:id="resultArea" prefHeight="200" prefWidth="600" wrapText="true"/>
+</VBox>
