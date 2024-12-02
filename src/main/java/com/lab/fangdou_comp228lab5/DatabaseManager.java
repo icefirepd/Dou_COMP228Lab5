@@ -39,17 +39,6 @@ public class DatabaseManager {
         }
     }
 
-//    public void addGame(int gameId, String gameTitle) {
-//        String query = "INSERT INTO Fang_Dou_game (game_id, game_title) VALUES (?, ?)";
-//        try (PreparedStatement statement = connection.prepareStatement(query)) {
-//            statement.setInt(1, gameId);
-//            statement.setString(2, gameTitle);
-//            statement.executeUpdate();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
     public void addPlayer(int playerId, String firstName, String lastName, String address,
                           String postalCode, String province, String phoneNumber, int gameId,
                           int score, String datePlayed) {
@@ -159,12 +148,4 @@ public class DatabaseManager {
         }
         return results;
     }
-
-//    public void closeConnection() {
-//        try {
-//            if (connection != null) connection.close();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
 }

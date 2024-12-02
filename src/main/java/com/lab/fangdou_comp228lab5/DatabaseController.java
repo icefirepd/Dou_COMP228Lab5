@@ -26,7 +26,7 @@ public class DatabaseController {
         String gameTitle = view.getGameTitle();
         int score = Integer.parseInt(view.getScore());
         String datePlayed = view.getDatePlayed();
-        int playerId = Integer.parseInt(view.getPlayerId());  // Assuming player ID is entered
+        int playerId = Integer.parseInt(view.getPlayerId());
 
         model.addGame(gameId, gameTitle, score, datePlayed, playerId);
         view.setResultArea("Game added: " + gameTitle + " with score: " + score);
@@ -71,10 +71,4 @@ public class DatabaseController {
         }
         view.setResultArea(String.join("\n", games));
     }
-
-//    private void viewPlayerGames(ActionEvent e) {
-//        int playerId = Integer.parseInt(view.getPlayerId());
-//        var games = model.getPlayerGames(playerId);
-//        view.setResultArea(String.join("\n", games));
-//    }
 }
